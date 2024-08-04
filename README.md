@@ -16,57 +16,60 @@ By understanding tourist trends and preferences, stakeholders can make informed 
 5. [Features](#features)
 6. [Models](#models)
 7. [Results](#results)
-8. [Contributing](#contributing)
-9. [License](#license)
-10. [Acknowledgements](#acknowledgements)
-11. [Contact Information](#contact-information)
+8. [License](#license)
+9. [Acknowledgements](#acknowledgements)
+10. [Contact Information](#contact-information)
 
 ## Installation
 Follow these steps to set up the environment and install necessary dependencies.
 
-```bash
-# Clone the repository
-git clone https://github.com/aaryatim/tourist-prediction-nepal.git
 
-# Navigate to the project directory
-cd tourist-prediction-nepal
+## Clone the repository
+`git clone https://github.com/aaryatim/tourist-prediction-nepal.git`
 
-## Usage
+## Navigate to the project directory
+`cd tourist-prediction-nepal`
+
+### Usage
 
 Follow these steps to use the project.
 
-Step 1: Import Raw Data to MySQL
+**Step 1:** Import Raw Data to MySQL
+
 Open import_data.ipynb:
+
 Open the import_data.ipynb Jupyter notebook.
+
 
 Replace Database Credentials:
 Replace the placeholders for database credentials with your actual MySQL credentials in the notebook.
 
-
 Run the Notebook:
 Execute the cells in the notebook to import the raw data tables into MySQL.
 
-Step 2: Remove Unnamed Columns
+**Step 2:** Remove Unnamed Columns
+
 Run the provided SQL script to remove unnamed columns from all tables in the database:
 
-mysql -u your_username -p your_database < sql/remove_unnamed_cols.sql
+`mysql -u your_username -p your_database < sql/remove_unnamed_cols.sql`
 
-Step 3: Clean the Data in MySQL
+**Step 3:** Clean the Data in MySQL
+
 Run the provided SQL script to clean the data:
 
-mysql -u your_username -p your_database < sql/clean_data.sql
+`mysql -u your_username -p your_database < sql/clean_data.sql`
 
-Step 4: Further Clean the Main Table, Perform EDA, and Create Models
+**Step 4:** Further Clean the Main Table, Perform EDA, and Create Models
 
 Open EDA.ipynb:
+
 Open the EDA.ipynb Jupyter notebook.
 
 
-Project Structure
+## Project Structure
 Here is an overview of the project directory and files.
 
-plaintext
-Copy code
+```
 project-root/
 │
 ├── data/
@@ -83,45 +86,57 @@ project-root/
 │
 ├── README.md                     # This README file
 
-ata
+```
+
+## Data
 The dataset used in this project is sourced from the Nepal Tourism Statistics Report 2022, uploaded by the Nepal government. 
 https://www.tourism.gov.np/files/NOTICE%20MANAGER_FILES/Setting_Nepal%20Tourism%20Statistic_2022.pdf 
 
-Data Cleaning
+## Data Cleaning
 The data was initially cleaned using MySQL to handle missing values, inconsistencies, and to transform it into a suitable format for analysis. The cleaned data was then imported into Python for further cleaning and preprocessing.
 
-Exploratory Data Analysis
+## Exploratory Data Analysis
 Conducted exploratory data analysis (EDA) to understand the data distribution, identify patterns, and detect outliers.
 
-Features
+## Features
 Key features of this project include:
 
-Data Cleaning: Ensuring data quality through multiple stages of cleaning.
-Exploratory Data Analysis: Understanding the underlying patterns and relationships in the data.
+Data Cleaning: Ensuring data quality through multiple stages of cleaning. 
+
+Exploratory Data Analysis: Understanding the underlying patterns and relationships in the data.  
+
 Model Training: Trying out different models to identify the best predictive model.
+
 Model Tuning: Fine-tuning the model parameters to improve performance.
+
 Prediction: Forecasting future tourist arrivals to aid in decision-making.
 
-Models
+## Models
 The following models were evaluated in this project:
 
 Linear Regression
+
 Decision Tree Regressor
+
 Random Forest Regressor
+
 Gradient Boosting Regressor
+
 Support Vector Regressor (SVR)
+
 K-Neighbors Regressor
-Results
+
+## Results
 The performance of the models was evaluated using metrics such as Root Mean Squared Error (RMSE) and R-squared.
 
-License
+## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-Acknowledgements
+## Acknowledgements
 Special thanks to the Nepal Tourism Board for providing the data.
 Thanks to the open-source community for providing the tools and libraries used in this project.
 
-Contact Information
+## Contact Information
 For any questions or collaboration opportunities, please contact me at:
 
 Email: atimilsina@smith.edu
