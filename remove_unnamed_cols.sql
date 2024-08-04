@@ -1,11 +1,15 @@
+#Create. database called tourist_project
 CREATE DATABASE tourist_project;
 USE tourist_project;
-#removing all the unnamed columns--created a drop statement
+#Remove all the unnamed columns--created a drop statement
+#Note: The unnamed columns were geenrated as a result of converting the data from pdf to xlsx/csv
+
 SELECT CONCAT('ALTER TABLE `', TABLE_NAME, '` DROP COLUMN `', COLUMN_NAME, '`;') AS drop_statement
 FROM information_schema.columns
 WHERE TABLE_SCHEMA = 'tourist_project'
-  AND COLUMN_NAME LIKE 'Unnamed:_%'
-#removing the unnamed columns by pasting the results of the above code
+AND COLUMN_NAME LIKE 'Unnamed:_%'
+
+#Remove the unnamed columns by pasting the results of the above code
 
 # drop_statement
 ALTER TABLE `age` DROP COLUMN `Unnamed:_10`;
